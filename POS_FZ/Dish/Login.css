@@ -1,0 +1,214 @@
+body {
+    display:flow-root;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    background: url('/Dish/LoginBG.png') no-repeat center center fixed; /* Relative path to image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+}
+
+
+.login-container {
+    background-color: white;
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    height: 520PX;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-image: url('/Dish/LoginBG.png');
+}
+
+#Wl {
+    margin-bottom: 20px;
+    color:white;
+    font-weight: bold;
+    font-size: 36px; /* Increased font size */
+    max-width: 500px;
+    height: auto; /* Remove fixed height for better flexibility */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    text-align: center; /* Center text */
+}
+
+/* Mobile-specific formatting */
+@media (max-width: 600px) {
+    Wl {
+        font-size: 24px; /* Slightly smaller on mobile devices */
+        margin-bottom: 15px;
+    }
+}
+
+
+.input-group {
+    margin-top: 50px;
+    text-align: left;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch target on mobile */
+    box-sizing: border-box;
+    border: 1px solid orangered;
+    border-radius: 4px;
+    font-size: 16px; /* Larger font for better readability on mobile */
+    height: 35px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: orangered;
+    color: white;
+    border:none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 90px;
+}
+
+button:hover {
+    background-color: orangered; /* Darker shade of blue for hover effect */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Mobile-specific formatting */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%; /* Full-width on smaller screens */
+        padding: 15px; /* Less padding on mobile */
+    }
+
+    h2 {
+        font-size: 18px; /* Slightly smaller heading */
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 12px; /* Larger touch targets on mobile */
+        font-size: 14px; /* Adjusted font size for mobile */
+    }
+
+    button {
+        padding: 14px;
+        background-color: orangered; /* Darker orange for the button on mobile */
+        border-color: orangered;
+    }
+
+    button:hover {
+        background-color: orangered
+        
+        
+        ; /* Darker shade for hover effect */
+    }
+
+    .input-group {
+        margin-bottom: 10px; /* Reduced margin for compact layout */
+    }
+
+    .error-message {
+        font-size: 14px; /* Slightly larger error message font on mobile */
+        margin-top: 8px;
+    }
+}
+/* Existing styles above... */
+
+/* Existing styles above... */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* Centered */
+    padding: 20px;
+    border: none;
+    width: 80%;
+    max-width: 400px; /* Responsive width */
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: slideIn 0.3s ease-out; /* Animation effect */
+}
+
+/* Modal Header for blue theme */
+.modal-header {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border-top-left-radius: 12px; /* Rounded corners */
+    border-top-right-radius: 12px; /* Rounded corners */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 16px;
+    color: #333; /* Darker text for readability */
+}
+
+.close-btn {
+    color: white; /* Close button in header */
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ddd; /* Lighter color on hover */
+    text-decoration: none;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.Logo1
+{
+    max-width: 100px;
+    
+    
+}
+.header
+{
+    margin-left:15px;
+}

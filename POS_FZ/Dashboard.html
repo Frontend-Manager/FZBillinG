@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DashBoard</h1>
+        </header>
+        <button id="Home">Home</button>
+        <main>
+            <section class="filters">
+                <h2>Filters</h2>
+                <div class="filter-controls">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" />
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" />
+                    <button id="applyFilters">Apply Filters</button>
+                </div>
+            </section>
+            <section class="charts">
+                <div class="chart-card">
+                    <h2>Monthly Sales Overview</h2>
+                    <canvas id="monthlySalesChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>Sales by Category</h2>
+                    <canvas id="salesByCategoryChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>Revenue Distribution</h2>
+                    <canvas id="revenueDistributionChart"></canvas>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <button id="exportCharts">Exportss</button>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Dashboard.js"></script>
+</body>
+</html>

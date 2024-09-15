@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <header class="header">
+        <img src="FZBillinG Logo.png"  alt="Restaurant Logo" class="logo1">
+    </header>    
+    <br>
+        <div class="login-container">
+        <h2 id="Wl">Access Your Account!</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="errorMessage" class="error-message"></p>
+        </form>
+    </div>
+     <!-- Modal Structure -->
+     <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>Login Successful!</p>
+        </div>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>

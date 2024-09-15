@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Menu Item</title>
+</head>
+<body>
+    <h2>Add New Menu Item</h2>
+    
+    <form id="addItemForm">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" required><br><br>
+
+        <label for="itemPrice">Item Price:</label>
+        <input type="number" id="itemPrice" required><br><br>
+
+        <label for="itemCategory">Category:</label>
+        <select id="itemCategory" required>
+            <option value="main">Main Course</option>
+            <option value="dessert">Dessert</option>
+            <option value="cold">Cold</option>
+        </select><br><br>
+
+        <label for="itemImage">Image URL:</label>
+        <input type="text" id="itemImage" required><br><br>
+
+        <button type="submit">Add Item</button>
+    </form>
+
+    <script>
+        document.getElementById('addItemForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const itemName = document.getElementById('itemName').value;
+            const itemPrice = parseFloat(document.getElementById('itemPrice').value);
+            const itemCategory = document.getElementById('itemCategory').value;
+            const itemImage = document.getElementById('itemImage').value;
+
+            const newItem = {
+                name: itemName,
+                price: itemPrice,
+                category: itemCategory,
+                image: itemImage
+            };
+
+            // Save the new item in localStorage (or send it to a backend)
+            let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
+            menuItems.push(newItem);
+            localStorage.setItem('menuItems', JSON.stringify(menuItems));
+
+            // Redirect to the menu page to show the updated menu
+            window.location.href = '192.168.232.18:5500/Dish/Html.html';
+        });
+    </script>
+</body>
+</html>
